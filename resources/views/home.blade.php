@@ -72,8 +72,17 @@
                             </div>
                         @endif
 
-                        {{ __('You are logged in!') }}
+                        Ha iniciado sesión.
                     </div>
+
+                    {{-- Verificar Correo Boton--}}
+                    @if (Auth::user()->email_verified_at == null)
+                        <div class="card-body">
+                            <div class="alert alert-danger" role="alert">
+                                Debe verificar su correo electrónico para continuar.
+                            </div>
+                        </div>
+                    @endif
                 </div>
             </div>
         </div>
