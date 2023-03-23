@@ -33,8 +33,8 @@
                             <label class="form-label" for="email">Correo Electronico</label>
                             <div class="col-12">
                                 <input type="email" id="email"
-                                    class="form-control form-control-lg form-control @error('email') is-invalid @enderror"
-                                    name="email" value="{{ old('email') }}" required autocomplete="email" autofocus />
+                                    class="form-control form-control-lg @error('email') is-invalid @enderror" name="email"
+                                    value="{{ old('email') }}" required autocomplete="email" autofocus />
                             </div>
                             @error('email')
                                 <span class="invalid-feedback" role="alert">
@@ -48,20 +48,19 @@
                             <label class="form-label" for="password">Contraseña</label>
                             <div class="col-12">
                                 <input id="password" type="password"
-                                    class="form-control form-control-lg form-control @error('password') is-invalid @enderror"
+                                    class="form-control form-control-lg @error('password') is-invalid @enderror"
                                     name="password" required autocomplete="current-password">
-
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
                             </div>
+                            @error('password')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
                         </div>
 
                         <div class="row">
-                            <button type="submit"
-                                class="btn btn-primary btn-lg btn-block col-12 mb-4">Iniciar Sesión</button>
+                            <button type="submit" class="btn btn-primary btn-lg btn-block col-12 mb-4">Iniciar
+                                Sesión</button>
                         </div>
 
                         <div class="d-flex justify-content-around align-items-center mb-1">
@@ -72,8 +71,7 @@
                                 <label class="form-check-label" for="remember"> Recuerdame </label>
                             </div>
                             @if (Route::has('password.request'))
-                                <a class="color"
-                                    href="{{ route('password.request') }}">Olvidaste tu contraseña?</a>
+                                <a class="color" href="{{ route('password.request') }}">Olvidaste tu contraseña?</a>
                             @endif
                         </div>
 

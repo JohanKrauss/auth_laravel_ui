@@ -45,7 +45,7 @@
                             <label class="form-label" for="email">Correo Electronico</label>
                             <div class="col-12">
                                 <input type="email" id="email"
-                                    class="form-control form-control-lg form-control @error('email') is-invalid @enderror"
+                                    class="form-control form-control-lg @error('email') is-invalid @enderror"
                                     name="email" value="{{ old('email') }}" required autocomplete="email"/>
                             </div>
                             @error('email')
@@ -60,7 +60,7 @@
                             <label class="form-label" for="password">Contraseña</label>
                             <div class="col-12">
                                 <input id="password" type="password"
-                                    class="form-control form-control-lg form-control @error('pasword') is-invalid @enderror"
+                                    class="form-control form-control-lg @error('pasword') is-invalid @enderror"
                                     name="password" required autocomplete="new-password">
 
                                 @error('password')
@@ -76,7 +76,7 @@
                                 Contraseña</label>
                             <div class="col-12">
                                 <input id="password_confirm" type="password"
-                                    class="form-control form-control-lg form-control @error('pasword') is-invalid @enderror"
+                                    class="form-control form-control-lg @error('pasword') is-invalid @enderror"
                                     name="password_confirmation" required autocomplete="new-password">
 
                                 @error('password')
